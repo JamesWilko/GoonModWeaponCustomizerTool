@@ -107,11 +107,8 @@ namespace WeaponCustomizationTool {
 			// Enable progress bar
 			progressBar.Enabled = true;
 
-			var materialConfigs = Directory.GetFiles( extractFolder, Strings.MaterialConfigExtension, SearchOption.AllDirectories );
-			materialConfigs = materialConfigs.Where( x => x.Contains( Strings.WeaponFileNameCheck ) ).ToArray();
-			extractPaths = materialConfigs.ToList();
-
-			WriteToConsole( string.Format( Strings.ProcessingFilesStart, extractPaths.Count ) );
+			string[] materialConfigs = Directory.GetFiles( extractFolder, Strings.MaterialConfigExtension, SearchOption.AllDirectories );
+			extractPaths = materialConfigs.Where( x => x.Contains( Strings.WeaponFileNameCheck ) ).ToList();
 
 			string path = "";
 			for ( int i = 0; i < extractPaths.Count; i++ ) {
@@ -126,7 +123,7 @@ namespace WeaponCustomizationTool {
 			}
 
 			progressBar.Value = 100;
-			WriteToConsole( Strings.ProcessingAllComplete );
+			WriteToConsole( string.Format( Strings.ProcessingAllComplete, materialConfigs.Length, extractPaths.Count ) );
 
 		}
 

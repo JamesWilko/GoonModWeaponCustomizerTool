@@ -15,11 +15,9 @@ namespace WeaponCustomizationTool {
 		public static string NoModsFolder = "Error: No mods override folder has been specified.";
 		public static string ModsFolderDoesNotExist = "Error: Mods folder does not exist.";
 
-		public static string ProcessingFilesStart = "Beginning Processing {0} Files...";
-		public static string ProcessingAllComplete = "Finished!";
-
 		public static string ProcessingFileStarted = "Processing file: {0}";
 		public static string ProcessingFileComplete = "...Done";
+		public static string ProcessingAllComplete = "Finished processing {0} material_configs, {1} weapon materials modified...";
 
 		public static string WeaponRendererRegex = "(generic:[\\w:]+)";
 		public static string WeaponBumpMapRegex = "(<bump_normal_texture.*)";

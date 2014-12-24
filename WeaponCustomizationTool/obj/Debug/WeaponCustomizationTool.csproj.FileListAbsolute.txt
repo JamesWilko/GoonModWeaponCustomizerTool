@@ -1,0 +1,10 @@
+c:\users\james\documents\visual studio 2013\Projects\WeaponCustomizationTool\WeaponCustomizationTool\bin\Debug\WeaponCustomizationTool.exe.config
+c:\users\james\documents\visual studio 2013\Projects\WeaponCustomizationTool\WeaponCustomizationTool\bin\Debug\WeaponCustomizationTool.exe
+c:\users\james\documents\visual studio 2013\Projects\WeaponCustomizationTool\WeaponCustomizationTool\bin\Debug\WeaponCustomizationTool.pdb
+c:\users\james\documents\visual studio 2013\Projects\WeaponCustomizationTool\WeaponCustomizationTool\obj\Debug\WeaponCustomizationTool.csprojResolveAssemblyReference.cache
+c:\users\james\documents\visual studio 2013\Projects\WeaponCustomizationTool\WeaponCustomizationTool\obj\Debug\WeaponCustomizationTool.Properties.Resources.resources
+c:\users\james\documents\visual studio 2013\Projects\WeaponCustomizationTool\WeaponCustomizationTool\obj\Debug\WeaponCustomizationTool.csproj.GenerateResource.Cache
+c:\users\james\documents\visual studio 2013\Projects\WeaponCustomizationTool\WeaponCustomizationTool\obj\Debug\WeaponCustomizationTool.exe
+c:\users\james\documents\visual studio 2013\Projects\WeaponCustomizationTool\WeaponCustomizationTool\obj\Debug\WeaponCustomizationTool.pdb
+c:\users\james\documents\visual studio 2013\Projects\WeaponCustomizationTool\WeaponCustomizationTool\obj\Debug\WeaponCustomizationTool.About.resources
+c:\users\james\documents\visual studio 2013\Projects\WeaponCustomizationTool\WeaponCustomizationTool\obj\Debug\WeaponCustomizationTool.Main.resources

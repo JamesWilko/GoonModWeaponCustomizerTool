@@ -9,6 +9,10 @@ namespace WeaponCustomizationTool {
 
 		public static string MaterialConfigExtension = "*.material_config";
 		public static string WeaponFileNameCheck = "wpn_";
+		public static string WeaponFileNameThirdPerson = "third";
+		public static string WeaponFileNameNPC = "npc";
+		//public static string[] WeaponFileNameGrenades = { "grenade", "gre_" };
+		public static string[] WeaponFileNameGrenades = { "_thq", "_cc" };
 
 		public static string NoExtractFolder = "Error: No extract folder has been specified.";
 		public static string ExtractFolderDoesNotExist = "Error: Extract folder does not exist.";
@@ -28,6 +32,8 @@ namespace WeaponCustomizationTool {
 		public static string DefaultColourA = "<variable value=\"1 0 0\" type=\"vector3\" name=\"tint_color_a\"/>\n";
 		public static string DefaultColourB = "<variable value=\"0 1 0\" type=\"vector3\" name=\"tint_color_b\"/>\n";
 		public static string DefaultMaterialAmount = "<variable value=\"1\" type=\"scalar\" name=\"material_amount\"/>";
+
+		public static string EndOfFile = "\n<!-- END OF FILE -->\n";
 
 	}
 }

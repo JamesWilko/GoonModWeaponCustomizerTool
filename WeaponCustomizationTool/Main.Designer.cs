@@ -39,19 +39,23 @@ namespace WeaponCustomizationTool {
 			this.modFolderPanel = new System.Windows.Forms.Panel();
 			this.processPanel = new System.Windows.Forms.Panel();
 			this.progressLabel = new System.Windows.Forms.Label();
+			this.optionsLabel = new System.Windows.Forms.Label();
+			this.optionsPanel = new System.Windows.Forms.Panel();
+			this.checkboxThirdperson = new System.Windows.Forms.CheckBox();
 			this.groupBox1.SuspendLayout();
 			this.extractPanel.SuspendLayout();
 			this.modFolderPanel.SuspendLayout();
 			this.processPanel.SuspendLayout();
+			this.optionsPanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupBox1
 			// 
 			this.groupBox1.Controls.Add(this.txtConsole);
 			this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.groupBox1.Location = new System.Drawing.Point(4, 130);
+			this.groupBox1.Location = new System.Drawing.Point(4, 172);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(456, 308);
+			this.groupBox1.Size = new System.Drawing.Size(456, 396);
 			this.groupBox1.TabIndex = 6;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Console Log";
@@ -66,7 +70,7 @@ namespace WeaponCustomizationTool {
 			this.txtConsole.Name = "txtConsole";
 			this.txtConsole.ReadOnly = true;
 			this.txtConsole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.txtConsole.Size = new System.Drawing.Size(450, 289);
+			this.txtConsole.Size = new System.Drawing.Size(450, 377);
 			this.txtConsole.TabIndex = 0;
 			this.txtConsole.WordWrap = false;
 			// 
@@ -181,7 +185,7 @@ namespace WeaponCustomizationTool {
 			this.processPanel.Controls.Add(this.progressBar);
 			this.processPanel.Controls.Add(this.btnProcessFolders);
 			this.processPanel.Dock = System.Windows.Forms.DockStyle.Top;
-			this.processPanel.Location = new System.Drawing.Point(4, 101);
+			this.processPanel.Location = new System.Drawing.Point(4, 143);
 			this.processPanel.Name = "processPanel";
 			this.processPanel.Padding = new System.Windows.Forms.Padding(4);
 			this.processPanel.Size = new System.Drawing.Size(456, 29);
@@ -191,20 +195,53 @@ namespace WeaponCustomizationTool {
 			// 
 			this.progressLabel.AutoSize = true;
 			this.progressLabel.Dock = System.Windows.Forms.DockStyle.Top;
-			this.progressLabel.Location = new System.Drawing.Point(4, 88);
+			this.progressLabel.Location = new System.Drawing.Point(4, 130);
 			this.progressLabel.Name = "progressLabel";
 			this.progressLabel.Size = new System.Drawing.Size(51, 13);
 			this.progressLabel.TabIndex = 10;
 			this.progressLabel.Text = "Progress:";
 			// 
+			// optionsLabel
+			// 
+			this.optionsLabel.AutoSize = true;
+			this.optionsLabel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.optionsLabel.Location = new System.Drawing.Point(4, 88);
+			this.optionsLabel.Name = "optionsLabel";
+			this.optionsLabel.Size = new System.Drawing.Size(46, 13);
+			this.optionsLabel.TabIndex = 11;
+			this.optionsLabel.Text = "Options:";
+			// 
+			// optionsPanel
+			// 
+			this.optionsPanel.Controls.Add(this.checkboxThirdperson);
+			this.optionsPanel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.optionsPanel.Location = new System.Drawing.Point(4, 101);
+			this.optionsPanel.Name = "optionsPanel";
+			this.optionsPanel.Padding = new System.Windows.Forms.Padding(4);
+			this.optionsPanel.Size = new System.Drawing.Size(456, 29);
+			this.optionsPanel.TabIndex = 10;
+			// 
+			// checkboxThirdperson
+			// 
+			this.checkboxThirdperson.AutoSize = true;
+			this.checkboxThirdperson.Dock = System.Windows.Forms.DockStyle.Left;
+			this.checkboxThirdperson.Location = new System.Drawing.Point(4, 4);
+			this.checkboxThirdperson.Name = "checkboxThirdperson";
+			this.checkboxThirdperson.Size = new System.Drawing.Size(166, 21);
+			this.checkboxThirdperson.TabIndex = 0;
+			this.checkboxThirdperson.Text = "Include Third-person Models?";
+			this.checkboxThirdperson.UseVisualStyleBackColor = true;
+			// 
 			// Main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(464, 442);
+			this.ClientSize = new System.Drawing.Size(464, 572);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.processPanel);
 			this.Controls.Add(this.progressLabel);
+			this.Controls.Add(this.optionsPanel);
+			this.Controls.Add(this.optionsLabel);
 			this.Controls.Add(this.modFolderPanel);
 			this.Controls.Add(this.modFolderLabel);
 			this.Controls.Add(this.extractPanel);
@@ -220,6 +257,8 @@ namespace WeaponCustomizationTool {
 			this.modFolderPanel.ResumeLayout(false);
 			this.modFolderPanel.PerformLayout();
 			this.processPanel.ResumeLayout(false);
+			this.optionsPanel.ResumeLayout(false);
+			this.optionsPanel.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -243,6 +282,9 @@ namespace WeaponCustomizationTool {
 		private System.Windows.Forms.Panel modFolderPanel;
 		private System.Windows.Forms.Panel processPanel;
 		private System.Windows.Forms.Label progressLabel;
+		private System.Windows.Forms.Label optionsLabel;
+		private System.Windows.Forms.Panel optionsPanel;
+		private System.Windows.Forms.CheckBox checkboxThirdperson;
 	}
 }
 

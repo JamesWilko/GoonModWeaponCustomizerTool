@@ -107,13 +107,31 @@ namespace WeaponCustomizationTool {
 			// Enable progress bar
 			progressBar.Enabled = true;
 
+			// Get all material configs
 			string[] materialConfigs = Directory.GetFiles( extractFolder, Strings.MaterialConfigExtension, SearchOption.AllDirectories );
 			extractPaths = materialConfigs.Where( x => x.Contains( Strings.WeaponFileNameCheck ) ).ToList();
 
+			// Exlude thirdperson models
+			if ( !checkboxThirdperson.Checked ) {
+				extractPaths = extractPaths.Where( x => !x.Contains( Strings.WeaponFileNameThirdPerson ) ).ToList();
+			}
+
+			// Exclude NPC models
+			extractPaths = extractPaths.Where( x => !x.Contains( Strings.WeaponFileNameNPC ) ).ToList();
+
+			// Exclude grenades
+			foreach ( string grenadePath in Strings.WeaponFileNameGrenades )
+			{
+				extractPaths = extractPaths.Where( x => !x.Contains( grenadePath ) ).ToList();
+			}
+
+			// Process each material
+			string allPaths = "";
 			string path = "";
 			for ( int i = 0; i < extractPaths.Count; i++ ) {
 				
 				path = extractPaths[i];
+				allPaths += path.Replace( extractFolder, "" ) + "\n";
 
 				WriteToConsole( string.Format( Strings.ProcessingFileStarted, path.Replace( extractFolder, "" ) ) );
 				ProcessMaterialConfigFile( path );
@@ -122,6 +140,12 @@ namespace WeaponCustomizationTool {
 
 			}
 
+			// Write all paths to file
+			StreamWriter writer = new StreamWriter( modsFolder + "/paths.txt", false, Encoding.UTF8 );
+			writer.Write( allPaths );
+			writer.Close();
+
+			// Show finish
 			progressBar.Value = 100;
 			WriteToConsole( string.Format( Strings.ProcessingAllComplete, materialConfigs.Length, extractPaths.Count ) );
 
@@ -160,6 +184,7 @@ namespace WeaponCustomizationTool {
 				data += "\n" + Strings.DefaultReflectionTexture + Strings.DefaultMaterialTexture + Strings.DefaultColourA + Strings.DefaultColourB + Strings.DefaultMaterialAmount;
 				newConfigData = newConfigData.Replace( m.ToString(), data );
 			}
+			newConfigData += Strings.EndOfFile;
 
 			// Write data to file
 			StreamWriter writer = new StreamWriter( destination, false, Encoding.UTF8 );
